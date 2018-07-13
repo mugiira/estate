@@ -1,90 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Vill Care </title>
-	<meta viewport="">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet"  href="css/bootstrap.min.css">
 
-</head>
-<body>
-	<div class="container">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="images/villacare log.png" class="logo">
-      </a>
-    </div>
+<?php
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="activ"><a href="index.php">HOME<span class="sr-only">(current)</span></a></li>
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FOR SALE  </a>
-          <ul class="dropdown-menu">
-            <li ><a href="#">Flat & Apartments</a></li>
-             <li role="separator" class="divider"></li>
-            <li ><a href="#">Houses</a></li>
-             <li role="separator" class="divider"></li>
-            <li ><a href="#">Commercial Properties</a></li>
-            	
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FOR RENT  </a>
-          <ul class="dropdown-menu">
-            <li ><a href="#">Flat & Apartments</a></li>
-             <li role="separator" class="divider"></li>
-            <li ><a href="#">Houses</a></li>
-             <li role="separator" class="divider"></li>
-            <li ><a href="#">Commercial Properties</a></li>
-      		<li role="separator" class="divider"></li>
-            <li ><a href="#">Bedsitter</a></li>
-            	
-          </ul>
-        </li>
-        <li class="activ"><a href="services.php">SERVICES<span class="sr-only">(current)</span></a></li>
-        <li class="activ"><a href="contact.php">CONTACT<span class="sr-only">(current)</span></a></li>
-      </ul>
-      <div>
-      	<button class="btn btn-primary list">List Your Propery</button>
-      	
+include("includes/header.php");
+?>
 
-      </div>
-      
-     
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav><!--- ====== end of nav ====== -->
+<!--- ====== end of nav ====== -->
 
 	<!--- ====== start  of Landing Area ====== -->
 	
-		<div class="landarea" id="bg">
-			<div class="quote">
-			<h1>Buy, sell and  rent property online</h1>
-		</div>
-		<div id="formsearch">
-			<form class="navbar-form " role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="enter for rental,sales,buying">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-		</div>
-
-
-	</div>
+    <?php include("includes/landing_area.php");?>
 		<!--- ====== end of Landing Area ====== -->
+
+        <!---- ###### the stating of feature property ######----->
+        <div class="row" id="feature">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="feature-title">Feature Property</h1>
+                <hr>
+
+                <div class="col-md-3">
+                    <div class="feature-one">
+                        <img src="images/feature/image1.jpg" class="feature-image">
+                        <div class="feature-subtitle">
+                            <h2 class="property-title">Gateway </h2>
+                            <h3 class="property-location">Syokimau,Athi River</h3>
+                            <h4 class="property-price">From Ksh 7,000,000</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-one">
+                        <a href="property_details.php" class="property-details">
+                            <img src="images/feature/image2.jpg" class="feature-image">
+                            <div class="feature-subtitle">
+                                <h2 class="property-title">Darini Duplex</h2>
+                                <h3 class="property-location">Huligham ,Dagoretti North</h3>
+                                <h4 class="property-price">From Ksh 26,000,000</h4>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-one">
+                        <a href="property_details.php" class="property-details">
+                            <img src="images/feature/image3.jpg" class="feature-image">
+                            <div class="feature-subtitle">
+                                <h2 class="property-title">Darini Duplex</h2>
+                                <h3 class="property-location">Huligham ,Dagoretti North</h3>
+                                <h4 class="property-price">From Ksh 26,000,000</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-one">
+                        <a href="property_details.php" class="property-details">
+                            <img src="images/feature/image4.jpg" class="feature-image">
+                            <div class="feature-subtitle">
+                                <h2 class="property-title">Darini Duplex</h2>
+                                <h3 class="property-location">Huligham ,Dagoretti North</h3>
+                                <h4 class="property-price">From Ksh 26,000,000</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
 </div>
 
 

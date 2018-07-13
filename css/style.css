@@ -63,7 +63,7 @@ position: relative;
 }
 
 #bg{
-	background: gray;
+    background: gray;
 background-image: url("../images/4.jpeg");
 background-size: cover;
 background-position: center;
@@ -88,7 +88,7 @@ height:70vh;
 position: absolute;
 width:80%;
 height: 55px;
-background-color:#000000;
+background-color: #2b1613;
 opacity: 0.7;
 top:50%;
 left:5%;
@@ -96,23 +96,141 @@ left:5%;
 
 #formsearch input[type="text"]{
 	position: absolute;
-	width: 700px !important;
+	width: 750px !important;
 	top:20%;
 	left: 2%;
 	color:black;
-	font-family: monospace;
-	font-style: 300;
-	font-size:18px;
+	font-family: "Roboto Black";
+    letter-spacing: 2px;
+    font-size:18px;
+    background-color: white !important;
+    border: none;
+    outline: none;
+    padding-left:50px;
 }
 #formsearch button{
 	position: absolute;
 	width: 100px !important;
 	top:20%;
-	left: 80%;
-
+	left: 85%;
+    background-color: #c13037;
+    border: none;
+    outline: none;
+    font-family: "Roboto Black ";
+    font-weight: 400;
+    font-size: 16px;
+    color: whitesmoke;
 }
+
 
 /*======= search area form starting======*/
 
 
 /*======= End of landing  Area ======*/
+/*======= The starting of feature section ======*/
+#feature{
+    background: whitesmoke;
+    height: 500px;
+    margin:0px 0px 0px 0px;
+
+}
+.feature-title{
+   margin-left:30%;
+    font-family:monospace;
+    font-weight: 200;
+    font-size: 34px;
+    color:black;
+
+}
+hr {
+    border: 1px solid #857a76 !important;
+
+}
+.feature-one{
+    width:250px;
+    height: 380px;
+    background-color:#f5f5f5;
+
+    box-shadow: 5px  5px  8px #1b1413;
+}
+.feature-image{
+    width:250px;
+    height: 250px;
+    cursor: pointer;
+}
+.property-title{
+    font-family: monospace;
+    font-weight: 200;
+    font-size:20px;
+    color:black;
+    text-align: center;
+}
+.property-location{
+    font-family: monospace;
+    font-weight: 200;
+    font-size:15px;
+    margin-left: 5px;
+    margin-top:5px;
+    color:black;
+    text-align: center;
+}
+.property-price{
+    font-family: "Roboto Black";
+    font-weight: 400;
+    font-size:18px;
+    margin-left: 5px;
+    margin-top:5px;
+    color:black;
+    text-align: center;
+}
+a:hover{
+    text-decoration: none !important;
+
+}
+/*======= End of feature section ======*/
+/*=======  Start property details page  ======*/
+
+#property_details{
+    background: white;
+    margin-top: -19.5px !important;
+    margin-right:100px !important;
+}
+.pro-title{
+    text-align: center;
+    color: #000000;
+
+    font-family: "Roboto Black";
+    margin-top: 30px;
+    text-transform:uppercase;
+}
+.main-img img{
+    width: 780px;
+    height: 500px;
+}
+.main-img{
+    width:70%;
+    height: 50% !important;
+    margin-left: 10%;
+}
+#thumbnail{
+    margin-left:15%;
+}
+#thumbnail img{
+    width: 125px;
+    height: 120px;
+    margin-left: 5px;
+
+
+
+
+}
+.thumbnail img{
+    float: left;
+    width: 125px;
+    height: 120px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/*=======  End property details page  ======*/
