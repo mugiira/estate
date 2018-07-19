@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+.col-sm-10{
+    background-color: #1b6d85 !important;
+;
+}
+.col-sm-2{
+    background-color: #2f4050 !important;
+
+}
+#side_menu a{
+color:#ffff00;
+}
+.container{
+    margin-top:20px !important;
+}
+#title_heading{
+    color:#fff !important;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 500;
+}
+label{
+    color:#fff !important;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 500;
+}
+.form-control input[type="text"]{
+    width:400px !important;
+    height: 100px !important;
+
+      }
+

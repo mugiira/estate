@@ -19,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php">
                     <img alt="Brand" src="images/villacare log.png" class="logo">
                 </a>
             </div>
@@ -27,7 +27,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
            
                 <ul class="nav navbar-nav">
-                    <li class="activ"><a h <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">ref="index.php">HOME<span class="sr-only">(current)</span></a></li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FOR SALE  </a>
