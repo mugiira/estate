@@ -31,24 +31,24 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FOR SALE  </a>
                         <ul class="dropdown-menu">
-                            <li ><a href="#">Flat & Apartments</a></li>
+                            <li ><a href="for_rent.php">Flat & Apartments</a></li>
                             <li role="separator" class="divider"></li>
                             <li ><a href="#">Houses</a></li>
                             <li role="separator" class="divider"></li>
-                            <li ><a href="#">Commercial Properties</a></li>
+                            <li ><a href="commercial_properties.php">Commercial Properties</a></li>
 
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FOR RENT  </a>
                         <ul class="dropdown-menu">
-                            <li ><a href="#">Flat & Apartments</a></li>
+                            <li ><a href="flat_sale.php">Flat & Apartments</a></li>
                             <li role="separator" class="divider"></li>
                             <li ><a href="#">Houses</a></li>
                             <li role="separator" class="divider"></li>
                             <li ><a href="#">Commercial Properties</a></li>
                             <li role="separator" class="divider"></li>
-                            <li ><a href="#">Bedsitter</a></li>
+                            <li ><a href="bedsitter_rent.php">Bedsitter</a></li>
 
                         </ul>
                     </li>

@@ -131,7 +131,8 @@ left:5%;
 #feature{
     background: whitesmoke;
     height: 500px;
-    margin:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px ;
+
 
 }
 .feature-title{
@@ -150,7 +151,7 @@ hr {
     width:250px;
     height: 380px;
     background-color:#f5f5f5;
-
+    margin:0px 0px 0px 100px ;
     box-shadow: 5px  5px  8px #1b1413;
 }
 .feature-image{
@@ -193,7 +194,8 @@ a:hover{
 #property_details{
     background: white;
     margin-top: -19.5px !important;
-    margin-right:100px !important;
+    margin-right:75px !important;
+
 }
 .pro-title{
     text-align: center;
@@ -213,7 +215,8 @@ a:hover{
     margin-left: 10%;
 }
 #thumbnail{
-    margin-left:15%;
+    margin-left:10%;
+    border: none;
 }
 #thumbnail img{
     width: 125px;
@@ -224,6 +227,14 @@ a:hover{
 
 
 }
+.thumbnail{
+    border: none !important;
+    padding: 0px !important;
+    border-radius: none !important;
+    margin:15px 15px 15px 0px !important;
+
+
+}
 .thumbnail img{
     float: left;
     width: 125px;
@@ -231,6 +242,46 @@ a:hover{
     margin-top: 5px;
     margin-left: 5px;
 }
+.details{
+    margin-top: 20px !important;
+    margin-left: 50px !important;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 15px;
 
+}
 
 /*=======  End property details page  ======*/
+/*=======  for_rent css   ======*/
+#img_side{
+
+    margin-bottom:10px;
+}
+.house_name{
+    float:right;
+
+
+
+}
+.house_name h1 h2{
+    font-family:monospace;
+    font-size: 14px;
+    font-weight: 300;
+}
+.house_name p{
+    font-family:monospace;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+/*=======  End for_rent css  ======*/
+
+.main-image{
+
+}
+.feature-image-details{
+    width: 750px;
+    height: 500px;
+
+}

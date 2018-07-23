@@ -23,6 +23,7 @@
                 <li class="active"><a href="index.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
                 <li><a href="category.php">Category</a><li>
                 <li><a href="post_property.php">Posts Jobs</a><li>
+                <li><a href="post.php">Posts</a><li>
             </ul>
 
         </div><!---- End of col-sm-2 ==== ---->

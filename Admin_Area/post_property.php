@@ -32,6 +32,8 @@ include ('includes/session.php');
                     <li><a href="index.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
                     <li><a href="category.php">Category</a><li>
                     <li class="active"><a href="post_property.php">Post Jobs</a><li>
+                    <li ><a href="post.php">Post</a><li>
+
                 </ul>
 
             </div><!---- End of col-sm-2 ==== ---->
@@ -72,26 +74,25 @@ include ('includes/session.php');
                             <label for="price">Property Price </label>
                             <input type="text" name="pro_price" placeholder="enter the Property price" class="form-control" id="price">
                         </div>
+
                         <div class="form-group">
                             <label for="exampleInputFile">Upload Image1</label>
-                            <input type="file" id="exampleInputFile" name="pro_img1">
+                            <input type="file" id="exampleInputFile" name="image">
 
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Upload Image2</label>
-                            <input type="file" id="exampleInputFile" name="pro_img2">
+                            <label for="exampleInputFile">Upload Image1</label>
+                            <input type="file" id="exampleInputFile" name="image1">
 
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Upload Image3</label>
-                            <input type="file" id="exampleInputFile" name="pro_img3">
+                            <label for="exampleInputFile">Upload Image1</label>
+                            <input type="file" id="exampleInputFile" name="image2">
 
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputFile">Upload Image4</label>
-                            <input type="file" id="exampleInputFile" name="pro_img4">
 
-                        </div>
+
+
 
                         <div class="form-group">
                             <label for="pro_description">Property description </label>
@@ -126,23 +127,20 @@ if(isset($_POST['post_property'])) {
     $pro_price = $_POST['pro_price'];
     $pro_description = $_POST['pro_description'];
 
-    $property_image=$_FILES['pro_img1']['name'];
-    $property_image_tmp=$_FILES['pro_img1']['tmp_name'];
 
-    $property_image1=$_FILES['pro_img2']['name'];
-    $property_image1_tmp=$_FILES['pro_img2']['tmp_name'];
+    $images=$_FILES['image']['name'];
+    $images_tmp=$_FILES['image']['tmp_name'];
 
-    $property_image2=$_FILES['pro_img3']['name'];
-    $property_image2_tmp=$_FILES['pro_img3']['tmp_name'];
+    $images1=$_FILES['image1']['name'];
+    $images1_tmp=$_FILES['image1']['tmp_name'];
+
+    $images2=$_FILES['image2']['name'];
+    $images2_tmp=$_FILES['image2']['tmp_name'];
 
 
-    $property_image3=$_FILES['pro_img4']['name'];
-    $property_image3_tmp=$_FILES['pro_img4']['tmp_name'];
 
-    move_uploaded_file($property_image_tmp,"pro_images/$property_image");
-    move_uploaded_file($property_image1_tmp,"pro_images/$property_image1");
-    move_uploaded_file($property_image2_tmp,"pro_images/$property_image2");
-    move_uploaded_file($property_image3_tmp,"pro_images/$property_image3");
+
+
 
 
     if (empty($pro_name) || empty($pro_location) || empty($pro_price)) {
@@ -152,8 +150,14 @@ if(isset($_POST['post_property'])) {
         $_SESSION['SuccessMessage'] = "it is too long";
         header('location:post_property.php');
     } else {
-        $insert_post = "INSERT INTO post_property (cat_name,pro_name,pro_location,pro_price,pro_description,pro_image1,pro_image2,pro_image3,pro_image4)
-          VALUES('$post_category','$pro_name','$pro_location ','$pro_price','$pro_description',' $property_image',' $property_image1',' $property_image2',' $property_image3')";
+
+        move_uploaded_file($images_tmp,"images/$images");
+        move_uploaded_file($images1_tmp,"images/$images1");
+        move_uploaded_file($images2_tmp,"images/$images2");
+
+
+        $insert_post = "INSERT INTO postproperty (cat_name,pro_name,pro_location,pro_price,pro_description,image,image1,image2)
+          VALUES('$post_category','$pro_name','$pro_location ','$pro_price','$pro_description','$images','$images1',' $images2')";
         $query = mysqli_query($conn, $insert_post);
         if ($query) {
             $_SESSION['SuccessMessage'] = "it is post is added successfully to the database ";
