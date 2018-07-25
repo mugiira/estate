@@ -1,3 +1,31 @@
+<?php
+include ("init/db.php");
+
+session_start();
+if(isset($_POST['login'])){
+    $username= $_POST['username'];
+    $pass= $_POST['pass'];
+
+    $check_email="SELECT * FROM users WHERE username ='$username' AND password = '$pass'";
+    $run= mysqli_query($conn,$check_email);
+
+    if(mysqli_num_rows($run)> 0){
+        $_SESSION['username']= $username;
+        echo " <script> window.open('welcome.php','_self')</script>";
+    }
+    else{
+
+        echo "<script> alert('email or password is incorrect') </script>";
+    }
+
+
+}
+
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,47 +33,115 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dash Board</title>
+    <title>Properties</title>
     <link rel="stylesheet"  href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/admin_style.css">
-
-
 
 
 </head>
+<style>
+    h2{
+        font-family: "Roboto Black";
+        font-size: 28px;
+        font-weight: 100;
+        text-transform: uppercase;
+        color: black;
+
+    }
+    .navbar{
+        min-height: 80px !important ;
+
+        background-color: rgba(238, 228, 217, 0.7) !important;
+        border:none!important;
+        border-radius: none !important;
+
+    }
+    .navbar .navbar-inverse{
+        height: 50px;
+    }
+    .logo{
+        width: 200px;
+        height: 60px;
+
+    }
+label{
+    font-family:monospace;
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+
+</style>
 <body>
-<div class="container" id="container"><!---- Start of container ==== ---->
-    <div class="row"><!---- Start of  row ==== ---->
-        <div class="col-sm-2"><!---- Start of col-sm-2 ==== ---->
-            <h1 class="text-center" id="title_heading">DashBoard</h1>
-            <ul id="side_menu" class="nav nav-pills nav-stacked">
-                <li class="active"><a href="index.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
-                <li><a href="category.php">Category</a><li>
-                <li><a href="post_property.php">Posts Jobs</a><li>
-                <li><a href="post.php">Posts</a><li>
-            </ul>
 
-        </div><!---- End of col-sm-2 ==== ---->
-        <div class="col-sm-10"><!---- Start of col-sm-10 ==== ---->
-            <h1>DashBoard</h1>
-            <i class="fa fa-cog fa-3x"></i>
-            <i class="fa fa-tasks fa-3x"></i>
-            <i class="fa fa-th-list fa-3x"></i>
-            <i class="fa fa-tags fa-3x"></i>
-            <i class="fa fa-comment fa-3x"></i>
-            <i class="fa fa-th fa-3x"></i>
-            <h2>Dash Board</h2>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php"></a>
+            <img alt="Brand" src="../images/villacare log.png" class="logo">
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 
 
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+<div class="row">
+    <div class="col-md-4"></div>
 
-        </div><!---- Start of col-sm-10 ==== ---->
+
+    <div class="col-md-4">
+<fieldset>
+    <form action="#" method="post">
+        <h2> Villa Care Admin Access</h2>
+
+        <div class="form-group">
+
+            <label for="name">UserName </label>
+            <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input type="text" name="username"  class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+
+            <label for="name">Password </label>
+            <div class="input-group">
+                <span class="input-group-addon" >
+                    <span class="glyphicon glyphicon-user" >
+                    </span>
+
+                </span>
+            <input type="password" name="pass" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" name="login"class="btn btn-info btn-block" value="Login"  >
+        </div>
+    </form>
+</fieldset>
     </div>
-</div><!---- End  of container ==== ---->
+    <div class="col-md-4"></div>
+</div>
+</div>
+
 
 <script src="../js/jquery2.js"></script>
 <script  src="../js/bootstrap.js"></script>
-<script  src="../js/font-awesome.min.js"></script>
 </body>
 </html>

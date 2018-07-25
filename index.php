@@ -23,7 +23,9 @@ include ("init/db.php");
 
 <?php include("includes/content_area.php");?>
 <!---- ###### end of content area ######----->
-
+<!---- ###### footer ######----->
+<?php include("includes/footer.php");?>
+<!---- ###### end footer ######----->
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script  src="js/bootstrap.min.js"></script>

@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container"  >
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,9 +33,9 @@
                         <ul class="dropdown-menu">
                             <li ><a href="for_rent.php">Flat & Apartments</a></li>
                             <li role="separator" class="divider"></li>
-                            <li ><a href="#">Houses</a></li>
+
                             <li role="separator" class="divider"></li>
-                            <li ><a href="commercial_properties.php">Commercial Properties</a></li>
+                            <li ><a href="">Commercial Properties</a></li>
 
                         </ul>
                     </li>
@@ -46,13 +46,13 @@
                             <li role="separator" class="divider"></li>
                             <li ><a href="#">Houses</a></li>
                             <li role="separator" class="divider"></li>
-                            <li ><a href="#">Commercial Properties</a></li>
+                            <li ><a href="commercial_properties.php">Commercial Properties</a></li>
                             <li role="separator" class="divider"></li>
                             <li ><a href="bedsitter_rent.php">Bedsitter</a></li>
 
                         </ul>
                     </li>
-                    <li class="activ"><a href="services.php">SERVICES<span class="sr-only">(current)</span></a></li>
+                
                     <li class="activ"><a href="contact.php">CONTACT<span class="sr-only">(current)</span></a></li>
                 </ul>
                 <div>

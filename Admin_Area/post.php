@@ -26,7 +26,7 @@ include ('includes/session.php');
             <ul id="side_menu" class="nav nav-pills nav-stacked">
                 <li><a href="index.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
                 <li><a href="category.php">Category</a><li>
-                <li ><a href="post_property.php">Post Jobs</a><li>
+                <li><a href="post_property.php"><span ><i class="fa fa-th-list fa-1x"></i></span>&nbsp;Post Property</a><li>
                 <li class="active"><a href="post.php">Post</a><li>
             </ul>
 

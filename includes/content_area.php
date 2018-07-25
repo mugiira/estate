@@ -4,8 +4,13 @@
             <h1 class="feature-title">Feature Property</h1>
             <hr>
             <?php
+            if(isset($_GET['btn_search'])){
+                $search =$_GET['search'];
+                $post_pro ="SELECT * FROM  postproperty    WHERE pro_location LIKE '%$search%' OR pro_price LIKE '%$search%' ";
+            }else
 
-                $post_pro="SELECT * FROM postproperty ORDER BY RAND() LIMIT 0,3 ";
+
+            $post_pro="SELECT * FROM postproperty ORDER BY RAND() LIMIT 0,3 ";
                 $pro_query= mysqli_query($conn,$post_pro);
 
 
@@ -54,3 +59,4 @@
 
     </div>
 </div>
+

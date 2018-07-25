@@ -24,14 +24,14 @@ $cat_query=mysqli_query($conn,$cat_edit);
 
     <link rel="stylesheet" type="text/css" href="../css/admin_style.css">
 
- 
+
 
 </head>
 <body>
 <div class="container"><!---- Start of container ==== ---->
     <div class="row"><!---- Start of  row ==== ---->
         <div class="col-sm-2"><!---- Start of col-sm-2 ==== ---->
-            <h1 class="dash">Category</h1>
+            <h1 class="dash">DashBoard</h1>
             <ul id="side_menu" class="nav nav-pills nav-stacked">
                 <li ><a href="dashboad.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
 
@@ -65,44 +65,13 @@ $cat_query=mysqli_query($conn,$cat_edit);
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
 
-            <h2 class="text-center">VIEW ALL THE CATEGORIES</h2>
 
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Category Name</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
-
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-                while($row_cat=mysqli_fetch_array($cat_query)){
-                $cat_id= $row_cat['id'];
-                $cat_name= $row_cat['cat_name']
-                ?>
-            <tr>
-                <td>1</td>
-                <td><?= $cat_name ?></td>
-                <td><a href="cat_edit.php?edit=<?= $cat_id ; ?>" class="btn btn-success">Edit</a> </td>
-                <td><a href="cat_delete.php?delete<?= $cat_id ;?>" class="btn btn-danger">Delete</a> </td>
-
-            </tr>
-                <?php } ?>
-
-
-
-
-                </tbody>
-            </table>
         </div>
     </div>
 
 
 
-    </div>
+</div>
 </div><!---- End  of container ==== ---->
 
 <script src="../js/jquery2.js"></script>

@@ -6,9 +6,11 @@
 	box-sizing: border-box;
 	outline: none;
 
+
 }
 body{
-	background-color:#e5e6e5!important;
+
+    overflow-x: hidden;
 }
 /*======= navbar area ======*/
 .navbar{
@@ -54,16 +56,17 @@ margin-top: 25px;
 
 /**====== Starting of landing Area   =======***   */
 .landarea{
-width: 100%;
+width: 90.5%;
 height:70vh;
 background-color: red;
 margin-top: -19px;
 position: relative;
+    margin-left: 60px;
 
 }
 
 #bg{
-    background: gray;
+
 background-image: url("../images/4.jpeg");
 background-size: cover;
 background-position: center;
@@ -129,7 +132,7 @@ left:5%;
 /*======= End of landing  Area ======*/
 /*======= The starting of feature section ======*/
 #feature{
-    background: whitesmoke;
+    background:;
     height: 500px;
     margin:0px 0px 0px 0px ;
 
@@ -181,7 +184,7 @@ hr {
     font-size:18px;
     margin-left: 5px;
     margin-top:5px;
-    color:black;
+    color:gray;
     text-align: center;
 }
 a:hover{
@@ -192,9 +195,9 @@ a:hover{
 /*=======  Start property details page  ======*/
 
 #property_details{
-    background: white;
-    margin-top: -19.5px !important;
-    margin-right:75px !important;
+    background: #f5f4e9;
+    width:93%;
+    margin-top: -19.5px;
 
 }
 .pro-title{
@@ -254,24 +257,58 @@ a:hover{
 /*=======  End property details page  ======*/
 /*=======  for_rent css   ======*/
 #img_side{
+    float: left;
 
-    margin-bottom:10px;
+    margin-bottom:15px;
+    width: 1100px;
+    background-color: rgba(57, 154, 169, 0.05);
+
+
+    position: relative;
+
+}
+
+.house_names{
+    position: absolute;
+    float: right;
+    display: inline-block !important;
+    width:800px;
+    margin-left: 10px;
+    height: 190px;
+    color: #150b0a;
+
+
+
 }
 .house_name{
-    float:right;
+    position: absolute;
+    float: right;
+   display: inline-block !important;
+   width:800px;
+    margin-left: 10px;
+    height: 190px;
+    color: #150b0a;
+  top: 200px;
+    left: 0px;
+
+
 
 
 
 }
-.house_name h1 h2{
+.house_name h1 h2 h3 h4{
     font-family:monospace;
     font-size: 14px;
     font-weight: 300;
+    margin-left: 20%;
+    color: black;
 }
 .house_name p{
     font-family:monospace;
     font-size: 14px;
     font-weight: 200;
+    color: black;
+
 }
 
 
@@ -283,5 +320,70 @@ a:hover{
 .feature-image-details{
     width: 750px;
     height: 500px;
+
+}
+span .currency{
+    margin-left: 10px !important;
+}
+/*######## Rental houses css    ######### */
+
+#rental_houses{
+
+    width: 370px;
+    height: 360px;
+    background-color: rgba(57, 154, 169, 0.05) !important;
+
+    margin-top: 5px;
+    margin-left: 5px;
+    box-shadow: 5px  5px  8px #1b1413;
+
+
+
+    margin-right: 5px;
+
+
+}
+.rental_image img{
+    margin-top: 5px !important;
+    width:100%;
+    height: 200px;
+}
+.rental_anchor {
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+}
+.btn-sm{
+    background-color: black !important;
+    border: none !important;
+    cursor: pointer;
+}
+/*######## Rental houses css    ######### */
+.description{
+    margin-top:30px !important;
+    background-color:white;
+
+    margin-bottom: 10px;
+
+}
+.description h1{
+    font-family: monospace;
+    font-weight: 300;
+    font-size: 30px;
+    color: black;
+
+}
+
+#footer{
+    height: 50px;
+    background-color: rgba(228, 228, 228, 0.68);
+    margin-top: 50px;
+    margin-bottom:50px;
+    line-height: 20px;
+}
+#footer p{
+    text-align: center;
+    color: black;
+    line-height: 50px;
 
 }

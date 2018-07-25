@@ -16,7 +16,6 @@ if(isset($_GET['delete'])){
 
 
         echo "<script> alert('successfully updated ')</script> ";
-        header('location:category.php');
 
 
     }

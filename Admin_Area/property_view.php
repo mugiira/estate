@@ -3,8 +3,8 @@ include ('includes/session.php');
 
 
 // This for editing of category
-$cat_edit ="SELECT * FROM categories";
-$cat_query=mysqli_query($conn,$cat_edit);
+$pro_property ="SELECT * FROM postproperty";
+$query=mysqli_query($conn,$pro_property);
 
 
 
@@ -24,19 +24,20 @@ $cat_query=mysqli_query($conn,$cat_edit);
 
     <link rel="stylesheet" type="text/css" href="../css/admin_style.css">
 
- 
+
 
 </head>
 <body>
 <div class="container"><!---- Start of container ==== ---->
     <div class="row"><!---- Start of  row ==== ---->
         <div class="col-sm-2"><!---- Start of col-sm-2 ==== ---->
-            <h1 class="dash">Category</h1>
+            <h1 class="dash">Property View</h1>
             <ul id="side_menu" class="nav nav-pills nav-stacked">
                 <li ><a href="dashboad.php"><span ><i class="fa fa-th fa-1x"></i></span>Home</a><li>
 
                 <li class="active"><a href="category.php"><span ><i class="fa fa-tags fa-1x"></i></span>&nbsp;Category</a><li>
                 <li><a href="post_property.php"><span ><i class="fa fa-th-list fa-1x"></i></span>&nbsp;Post Property</a><li>
+                <li><a href="property_view.php">Property View</a><li>
                 <li><a href="logout.php">Logout</a><li>
 
             </ul>
@@ -44,20 +45,7 @@ $cat_query=mysqli_query($conn,$cat_edit);
         </div><!---- End of col-sm-2 ==== ---->
         <div class="col-sm-10"><!---- Start of col-sm-10 ==== ---->
 
-            <h1 class="text-center " id="title_heading">Category</h1>
-            <div><?php  echo error_Message(),success_Message();?></div>
-            <fieldset>
-                <form action="category.php" method="post">
-                    <div class="form-group">
 
-                        <label for="name">Category </label>
-                        <input type="text" name="category" placeholder="enter the category here" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" name="add"class="btn btn-success btn-block" value="ADD CATEGORY"  >
-                    </div>
-                </form>
-            </fieldset>
 
 
 
@@ -65,32 +53,74 @@ $cat_query=mysqli_query($conn,$cat_edit);
         <div class="col-sm-2"></div>
         <div class="col-sm-10">
 
-            <h2 class="text-center">VIEW ALL THE CATEGORIES</h2>
+            <h2 class="text-center">VIEW ALL THE PROPERTIES</h2>
 
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Category Name</th>
-                    <th scope="col">Edit</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Cat Name</th>
+                    <th scope="col">pro Name</th>
+                    <th scope="col">Pro loc</th>
+                    <th scope="col">Pro Price</th>
+                    <th scope="col">Pro Desc</th>
+                    <th scope="col">Image1</th>
+                    <th scope="col">Image2</th>
+
+                    <th scope="col" class="btn btn-success btn-sm" >Edit</th>
+                    <th scope="col" class="btn btn-danger btn-sm">Delete</th>
+
 
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                while($row_cat=mysqli_fetch_array($cat_query)){
-                $cat_id= $row_cat['id'];
-                $cat_name= $row_cat['cat_name']
-                ?>
-            <tr>
-                <td>1</td>
-                <td><?= $cat_name ?></td>
-                <td><a href="cat_edit.php?edit=<?= $cat_id ; ?>" class="btn btn-success">Edit</a> </td>
-                <td><a href="cat_delete.php?delete<?= $cat_id ;?>" class="btn btn-danger">Delete</a> </td>
+                $s=0;
+                while($row_pro=mysqli_fetch_assoc($query)){
+                    $pro_id=$row_pro['id'];
+                $cat_name=$row_pro['cat_name'];
+                $pro_name =$row_pro['pro_name'];
+                    $pro_location =$row_pro['pro_location'];
+                $pro_price =$row_pro['pro_price'];
 
-            </tr>
+                $pro_des =$row_pro['pro_description'];
+                $image =$row_pro['image'];
+                $image1 =$row_pro['image1'];
+                $image2 =$row_pro['image2'];
+                $s++;
+
+
+
+                ?>
+                    <tr>
+
+                        <td><?= $s; ?></td>
+                        <td><?= $cat_name ;?></td>
+                        <td><?= $pro_name ;?></td>
+                        <td><?php
+                            if(strlen($pro_location)>10){
+                                $pro_location = substr($pro_location,0,10);
+                            }
+                            echo $pro_location;
+
+                            ?></td>
+                        <td><?= $pro_price;?></td>
+
+                        <td> <?php
+                            if(strlen($pro_des)>10){
+                                $pro_des = substr($pro_des,0,10).'...';
+                            }
+                            echo $pro_des;
+
+                            ?></td>
+                        <td><img  src="images/<?= $image ?>" height="80px" width="80px">  </td>
+                        <td><img  src="images/<?= $image1 ?>" height="80px" width="80px">  </td>
+                        <td><a href="property_edit.php?edit=<?= $pro_id ;?>" class="btn btn-success">Edit</a> </td>
+                        <td><a href="property_delete.php?delete=<?= $pro_id ;?>" class="btn btn-danger">Delete</a> </td>
+
+                    </tr>
                 <?php } ?>
+
 
 
 
@@ -102,7 +132,7 @@ $cat_query=mysqli_query($conn,$cat_edit);
 
 
 
-    </div>
+</div>
 </div><!---- End  of container ==== ---->
 
 <script src="../js/jquery2.js"></script>

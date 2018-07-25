@@ -57,7 +57,7 @@ include ("init/db.php");
 
                             <img  src="Admin_Area/images/<?= $image ?>" height="250px" width="250px"  >
                             <img  src="Admin_Area/images/<?= $image1 ?>" height="250px" width="250px"  >
-                            <img  src="Admin_Area/images/<?= $image2 ?>" height="250px" width="250px"  >
+
 
 
 
@@ -75,13 +75,18 @@ include ("init/db.php");
             <div class="col-md-1"></div>
 
             </div>
+        <div class="description">
+            <h1 class="text-center">Description of the property</h1>
+            <hr>
+
         <p class="details"><?=$pro_description; ?></p>
+        </div>
 
         </div>
 
     </div>
 
-
+<?php include("includes/footer.php");?>
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <script  src="js/bootstrap.min.js"></script>
